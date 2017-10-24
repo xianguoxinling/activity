@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean name="/general/create.action" class="com.control.activity.CreateActivityController"></bean>
+    <bean name="/general/query.action" class="com.control.activity.QueryActivityByIDController"></bean>
+    <bean name="/general/add.action" class="com.control.activity.AddActivityProductionController"></bean>
+    <bean name="/general/delete.action" class="com.control.activity.DeleteActivityController"></bean>
+    <bean name="/general/remove.action" class="com.control.activity.DeleteActivityProductionController"></bean>
+    <bean name="/general/querydetail.action" class="com.control.activity.QueryActivityDetailController"></bean>
+    <bean name="/general/queryproduction.action" class="com.control.activity.QueryActivityProductionController"></bean>
+    <bean name="/general/querycanproduction.action" class="com.control.activity.QueryProductionCanActivityController"></bean>
+    <bean name="/general/querystoreactivity.action" class="com.control.activity.QueryStoreActivityController"></bean>
+    <bean name="/general/updatedetail.action" class="com.control.activity.UpdateActivityDetailController"></bean>
+    <bean name="/general/update.action" class="com.control.activity.UpdateActivityController"></bean>
+    <bean name="/general/queryforeditdetail.action" class="com.control.activity.QueryForEditDetailController"></bean>
+    
+    <bean name="/general/queryfordetele.action" class="com.control.activity.QueryStoreActivityForDetelController"></bean>
+    <bean name="/general/queryforshow.action" class="com.control.activity.QueryStoreActivityForShowController"></bean>
+    <bean name="/general/show.action" class="com.control.activity.ShowActivityController"></bean>
+    <bean name="/general/unshow.action" class="com.control.activity.UnShowActivityController"></bean>
+    
+    <bean name="/information/create.action" class="com.control.information.CreateInformationController"></bean>
+    <bean name="/information/querybyid.action" class="com.control.information.QueryInformatioByIDnController"></bean>
+    <bean name="/information/querybystore.action" class="com.control.information.QueryStoreInformationController"></bean>
+    <bean name="/information/beginquery.action" class="com.control.information.QueryInformatioForEditnController"></bean>
+    <bean name="/information/update.action" class="com.control.information.UpdateInformationController"></bean>
+    <bean name="/information/delete.action" class="com.control.information.DeleteInformationController"></bean>
+    
+    <bean name="/xcx/querystoreactivity.action" class="com.control.activity.xcx.QueryStoreActivityController"></bean>
+    <bean name="/xcx/queryactivity.action" class="com.control.activity.xcx.QueryActivityByIDController"></bean>
+    <bean name="/xcx/querystoreinfo.action" class="com.control.information.xcx.QueryStoreInformationController"></bean>
+    <bean name="/xcx/queryinfo.action" class="com.control.information.xcx.QueryInformatioByIDnController"></bean>
+    
+    
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="200000000000" />
+	</bean>	
+</beans>
